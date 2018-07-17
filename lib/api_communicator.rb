@@ -22,7 +22,10 @@ def get_character_movies_from_api(character)
     movies = RestClient.get(links)
     temp.push(JSON.parse(movies))
   end
+<<<<<<< HEAD
   binding.pry
+=======
+>>>>>>> 1c34be5c2bb1e7456711aaf3c9617b8c04b30abf
   # iterate over the character hash to find the collection of `films` for the given
   #   `character`
   # collect those film API urls, make a web request to each URL to get the info
@@ -37,8 +40,13 @@ end
 
 def parse_character_movies(films_hash)
   # some iteration magic and puts out the movies in a nice list
+<<<<<<< HEAD
   films_hash.each do |films|
     #Title (Year) - Director Name
+=======
+  films_hash.each do |film|
+    # The Empire Strikes Back (1980) -
+>>>>>>> 1c34be5c2bb1e7456711aaf3c9617b8c04b30abf
     puts film["title"] + "(" + film["release_date"] + ")" + " - " + film["director"]
 
   end
